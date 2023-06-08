@@ -1,4 +1,4 @@
-myenv\Scripts\activate
+
 echo "Building project..."
 python -m pip install -r requirements.txt
 
