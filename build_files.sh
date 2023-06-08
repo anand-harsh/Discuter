@@ -1,9 +1,11 @@
+myenv\Scripts\activate
 echo "Building project..."
 python -m pip install -r requirements.txt
 
 echo "Make migrations"
-python manage.py makemigrations --noinput
-python manage.py migrate --noinput
+python manage.py makemigrations
+python manage.py migrate
 
 echo "collect static"
 python manage.py collectstatic --noinput --clear
+
