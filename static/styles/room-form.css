@@ -1,0 +1,60 @@
+body{
+    background-color: #5b5b5b;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.create-room{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 6vh;
+}
+.container{
+    background-color: #e5dcdcd3;
+    width: max-content;
+    padding: 2rem;
+
+
+}
+
+.form__group > input{
+    width: 100%;
+    height: 1.5rem;;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.room__name > input{
+    width: 100%;
+    height: 1.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.form__btn{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: .9rem;
+}
+
+.form__btn > a{
+    text-decoration: none;
+    background-color: red;
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form__btn > button{
+    color: black;
+    background-color: green;
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}

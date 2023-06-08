@@ -1,0 +1,72 @@
+
+
+{% block content %}
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ChatUs</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico'%}">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'styles/room.css'%}">
+    </head>
+    <body>
+        <div class="room-container"> 
+            
+    {% comment %} **************************************** {% endcomment %}
+        <div class="left-slide">
+            <div class="topic__name">
+            <h1><a href="{% url 'home'%}"><img src="{% static 'images/home.png'%}" alt=""></a> {{room.name}}</h1>
+        </div>
+            <div class="comment-wrapper">
+        
+        <p>About : {{room.description}}</p>
+        <br>
+
+            {% for message in room_messages%}
+                <div class="user">
+                    <small>{{message.user}} {{message.created|timesince}} ago</small>
+                    {% if request.user == message.user %}
+                    <a href="{% url 'delete-message' message.id %}"><img src="{% static 'images/bin.png' %}" alt=""></a>
+                    {% endif %}
+                </div>
+                <div class="user-msg">
+                    <p>{{message.body}}</p>
+                </div>
+            {% endfor%}
+        
+        
+
+    </div>
+    {% if request.user.is_authenticated %}
+    <div class="comment-form">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="body" placeholder="Write a message"></input>
+        </form>
+    </div>
+        {% endif %}
+        </div>
+        {% comment %} **************************************** {% endcomment %}
+        <div class="right-slide">
+            <h3>Group Members</h3>
+            <hr class="col">
+            {% for user in participants %}
+
+                <p><img src="{% static 'images/user.png' %}" alt=""> {{user.username}}</p>
+
+            {% endfor %}
+        </div>
+            {% comment %} **************************************** {% endcomment %}
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
+
+{% endblock %}

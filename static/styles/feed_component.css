@@ -1,0 +1,43 @@
+.room-main{
+    margin-left: 1rem;
+}
+.rooms{
+    display: flex;
+}
+
+.rooms > h5 > a{
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.update-room > a > img{
+    width: 0.8rem;
+    height: 0.8rem;
+    position: relative;
+    left: 0.5rem;
+    top: 0.3rem;
+    gap: 1rem;
+
+  }
+
+.r-name > a{
+    text-decoration: none;
+    color: rgb(229, 213, 213);
+    font-size: 1.5rem;
+}
+
+.username{
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+}
+
+.username > a > img{
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-right: 0.1rem;
+}
+
+.room-box{
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+}

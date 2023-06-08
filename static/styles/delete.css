@@ -1,0 +1,51 @@
+body{
+    background-color: #5b5b5b;
+    display: grid;
+    overflow: hidden;
+
+}
+
+.form__it{
+    display: flex;
+    justify-content: center;
+}
+
+.form__it p{
+    color: white;
+}
+form{
+    background-color: rgba(0, 0, 0, 0.262);
+    width: max-content;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+form > p{
+
+    font-size: 1.5rem;
+    box-shadow: 2px solid black;
+}
+
+.discuss__btn > a{
+    text-decoration: none;
+    background-color: rgb(238, 72, 72);
+    color: black;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    position: relative;
+    left: 50%;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.discuss__btn > input{
+    text-decoration: none;
+    background-color: rgb(81, 255, 0);
+    color: black;
+    position: relative;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+}

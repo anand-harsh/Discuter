@@ -1,0 +1,36 @@
+{% extends 'main.html' %} 
+
+{% block content %}
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ChatUs</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico'%}">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'styles/delete.css'%}">
+    </head>
+    <body>
+        <div class="form__it">
+        <form action="" method="POST">
+            {% csrf_token%}
+          
+            <p>Are you sure you want to delete `{{obj}}`?</p>
+          
+            <div class="discuss__btn">
+              <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+              <input type="submit" value="Confirm" />
+            </div>
+          </form>
+
+        </div>
+          
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
+{% endblock content %}

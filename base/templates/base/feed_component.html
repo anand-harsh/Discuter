@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ChatUs</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico'%}">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'styles/feed_component.css'%}" />
+  </head>
+  <body>
+    <div class="room-box">
+      {% for room in rooms %}
+
+
+        <div class="rooms">
+          <h5>
+            <div class="r-name">
+              <a href="{% url 'room' room.id %}"> {{room.name}}</a>
+            </div>
+          </h5>
+          <div class="update-room">
+            {% if request.user == room.host %}
+            <a href="{% url 'update-room' room.id %}"
+              ><img src="{% static 'images/pencil.png'%}" alt=""
+            /></a>
+            <a href="{% url 'delete-room' room.id%}"
+              ><img src="{% static 'images/bin.png'%}" alt=""
+            /></a>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="username">
+          <a
+            ><img
+              src="{% static 'images/owner.png'%}"
+              alt=""
+            />{{room.host.username}}</a
+          >
+        </div>
+
+
+          <small style="    
+          background-color: white;
+          color: black;
+          font-weight: 600;
+          padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+          border-radius: 10px;"
+          
+          >{{room.topic.name}}</small>
+
+
+
+      </div>
+      <hr style="
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-top: 2px solid white;
+      border-radius: 500px;
+      " />
+      {% endfor %}
+
+
+    <script src="" async defer></script>
+  </body>
+</html>
