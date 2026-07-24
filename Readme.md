@@ -93,7 +93,6 @@ EDIT GROUP PAGE
 
 **Developer: Harsh Anand (anand-harsh)**
 
-# Copying the Code without PERMISSION of Repository Owner will be considered illegal and strict actions will be taken
 
 
 
